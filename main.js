@@ -1,33 +1,55 @@
-function gen_table(){
-    document.getElementById("tab").innerHTML="";
-    let n=Number(document.getElementById("capital").value);
-    let n2=Number(document.getElementById("couta").value);
-    let n3=Number(document.getElementById("interes").value);
-    if(n>0){   
-        for(i=1;i<=n2;i++){
-            ca=n/n2;
-            d1=ca.toFixed(2);
-            i2=((n*n3)/100)/n2;
-            d2=i2.toFixed(2);
-            r=ca+i2;
-            d3=r.toFixed(2);
-            document.getElementById("tab").innerHTML=document.getElementById("tab").innerHTML+
-                    `<tr>
-                        <td> ${i}</td>
-                        <td> ${d1}</td>
-                        <td> ${d2}</td>
-                        <td> ${d3}</td>
-                    </tr>`;
-        }
-        n1=n.toFixed(2);
-        t_i=i2*n2;
-        d4=t_i.toFixed(2);
-        t_p=r*n2;
-        d5=t_p.toFixed(2);
-        document.getElementById("t1").innerHTML=n1;
-        document.getElementById("t2").innerHTML=d4;
-        document.getElementById("t3").innerHTML=d5;        
-    }else{
-        alert("Falta ingresar un Número");
-    }
+// const numeros = [4, 5, 6, 7];
+
+// let resultado = numeros[0] + numeros[3];
+// console.log(resultado);
+
+
+
+const numeros = [4, 5, 6, 7];
+for(let index = 0; index < 4; index++){
+    console.log(numeros[index]);
 }
+
+let productos =[
+    {id: 1, nombre: "campera", precio: 1400},
+    {id: 2, nombre: "gorra", precio: 700},
+    {id: 3, nombre: "remera", precio: 500},
+    {id: 4, nombre: "mochila", precio: 100},
+     ];
+
+     let nombre = prompt ("ingrese el nombre del producto");
+     let encontrado = productos.find((item)=> item.nombre===nombre);
+
+     if(encontrado){
+        alert(`
+        id: ${encontrado.nombre}
+            nombre: ${encontrado.nombre}
+            precio: ${encontrado.precio} 
+        `);
+     }else{
+        alert("el producto no esta disponible")
+     }
+
+    //sintaxis
+     let arreglo = [];
+
+     //elementos iniciales 
+     let lenguajes = [ 'html5', 'css3', 'javascript' ];
+
+     //valor de arreglo
+     console.log(lenguajes); 
+     console.log(lenguajes[0])
+     console.log(lenguajes[1])
+     console.log(lenguajes[2])
+
+     //metodos pop push shift unshift
+     let numeros = [
+        'uno',
+        'dos',
+        'tres'
+     ];
+     console.log(numeros);
+     numeros.push('cuatro');
+     console.log(numeros);
+     numeros.pop();
+     console.log(numeros); 
